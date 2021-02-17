@@ -124,6 +124,7 @@ setQuiz();
 //結果を表示する要素を取得
 const $hatei = document.getElementById('hantei');
 
+const $reset = document.getElementById('reset');
 //次ボタンの要素を取得
 const $next = document.getElementById('next');
 // console.log($next);
@@ -219,6 +220,9 @@ $next.addEventListener('click', () => {
         $hatei.textContent = `
         終了！！あなたの正解数は${score}/ ${quizLength}です。 
         私が今、視聴中アニメまた、来季以降視聴予定のアニメをご紹介します。`;
+
+        $reset.href = "index.html"
+        $reset.textContent = "もう一度やり直す"
 
 
         new Vue({
